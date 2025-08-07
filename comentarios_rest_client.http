@@ -1,0 +1,28 @@
+### Crear un nuevo comentario
+POST http://localhost:8000/comentarios/
+Content-Type: application/json
+
+{
+  "texto": "Excelente servicio",
+  "usuario_email": "usuario@example.com",
+  "calificacion": 5
+}
+
+### Obtener todos los comentarios
+GET http://localhost:8000/comentarios/
+
+### Obtener comentario por ID
+GET http://localhost:8000/comentarios/1
+
+### Actualizar un comentario
+PUT http://localhost:8000/comentarios/1
+Content-Type: application/json
+
+{
+  "texto": "Servicio actualizado",
+  "usuario_email": "usuario@example.com",
+  "calificacion": 4
+}
+
+### Eliminar un comentario (si existe esta funcionalidad)
+DELETE http://localhost:8000/comentarios/1

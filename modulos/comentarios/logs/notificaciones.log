@@ -1,0 +1,12 @@
+2025-06-17 08:37:49,465 - INFO - [Usuario] Se envió alerta al usuario 1221 por su comentario negativo.
+2025-06-17 08:37:49,465 - INFO - [Admin] Atención: Comentario negativo registrado de 1221: '1212'
+2025-08-04 21:29:22,027 - INFO - [Usuario] Se envió alerta al usuario jalarconr@gmail.com por su comentario negativo.
+2025-08-04 21:29:22,028 - INFO - [Admin] Atención: Comentario negativo registrado de jalarconr@gmail.com: 'prueba'
+2025-08-04 23:04:13,678 - INFO - [Usuario] Se envió alerta al usuario usuarioprub_email por su comentario negativo.
+2025-08-04 23:04:13,681 - INFO - [Admin] Atención: Comentario negativo registrado de usuarioprub_email: 'servicio pendiente'
+2025-08-04 23:23:56,509 - INFO - [Usuario] Se envió alerta al usuario camilo por su comentario negativo.
+2025-08-04 23:23:56,510 - INFO - [Admin] Atención: Comentario negativo registrado de camilo: 'pruebaPos'
+2025-08-07 13:59:02,215 - INFO - [Usuario] Se envió alerta al usuario juancho@mail.com por su comentario negativo.
+2025-08-07 13:59:02,217 - INFO - [Admin] Atención: Comentario negativo registrado de juancho@mail.com: 'juancho'
+2025-08-07 14:58:45,899 - INFO - [Usuario] Se envió alerta al usuario hola2@mail.com por su comentario negativo.
+2025-08-07 14:58:45,900 - INFO - [Admin] Atención: Comentario negativo registrado de hola2@mail.com: 'hollaaa'

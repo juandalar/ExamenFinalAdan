@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Comentarios y Productos</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="navbar">
+        <!-- Comentarios -->
+        <a href="#" onclick="mostrarSeccion('crearComentario')">Crear Comentario</a>
+        <a href="#" onclick="mostrarSeccion('listaComentarios')">Lista de Comentarios</a>
+        <a href="#" onclick="mostrarSeccion('accionesComentario')">Acciones Comentario</a>
+
+        <!-- Productos -->
+        <a href="#" onclick="mostrarSeccion('crearProducto')">Crear Producto</a>
+        <a href="#" onclick="mostrarSeccion('listaProductos')">Lista de Productos</a>
+        <a href="#" onclick="mostrarSeccion('accionesProducto')">Acciones Producto</a>
+
+        <!-- Barberos -->
+        <a href="#" onclick="mostrarSeccion('crearBarbero')">Crear Barbero</a>
+        <a href="#" onclick="mostrarSeccion('listaBarberos')">Lista de Barberos</a>
+        <a href="#" onclick="mostrarSeccion('accionesBarbero')">Acciones Barbero</a>
+
+        <!-- Barberias -->
+        <a href="#" onclick="mostrarSeccion('crearBarberia')">Crear Barberia</a>
+        <a href="#" onclick="mostrarSeccion('listaBarberias')">Lista de Barberias</a>
+        <a href="#" onclick="mostrarSeccion('accionesBarberia')">Acciones Barberia</a>
+    </div>
+
+    <!-- Sección Crear Comentario -->
+    <div id="crearComentario" class="seccion">
+        <h2>Crear Comentario</h2>
+        <form id="formComentario">
+            <textarea id="texto" placeholder="Comentario"></textarea>
+            <input type="text" id="email" placeholder="Correo del usuario" />
+            <input type="number" id="calificacion" placeholder="Calificación (1-5)" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <!-- Lista Comentarios -->
+    <div id="listaComentarios" class="seccion">
+        <h2>Lista de Comentarios</h2>
+        <ul id="listaComentarios"></ul>
+    </div>
+
+    <!-- Acciones Comentario -->
+    <div id="accionesComentario" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar Comentario</h2>
+        <input type="text" id="idBuscarComentario" placeholder="ID del comentario" />
+        <button onclick="buscarComentario()">Buscar</button>
+        <textarea id="textoAccion" placeholder="Comentario"></textarea>
+        <input type="text" id="emailAccion" placeholder="Correo del usuario" />
+        <input type="number" id="calificacionAccion" placeholder="Calificación (1-5)" />
+        <button onclick="actualizarComentario()">Actualizar</button>
+        <button onclick="eliminarComentario()">Eliminar</button>
+    </div>
+
+    <!-- Sección Crear Producto -->
+    <div id="crearProducto" class="seccion">
+        <h2>Crear Producto</h2>
+        <form id="formProducto">
+            <input type="text" id="nombre" placeholder="Nombre del producto" />
+            <input type="text" id="descripcion" placeholder="descripcion" />
+            <input type="text" id="categoria" placeholder="Categoría" />
+            <input type="number" id="precio" placeholder="Precio" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <!-- Lista Productos -->
+    <div id="listaProductos" class="seccion">
+        <h2>Lista de Productos</h2>
+        <ul id="listaProductos"></ul>
+    </div>
+
+    <!-- Acciones Producto -->
+    <div id="accionesProducto" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar Producto</h2>
+        <input type="text" id="idBuscarProducto" placeholder="ID del producto" />
+        <button onclick="buscarProducto()">Buscar</button>
+        <input type="text" id="nombreAccion" placeholder="Nombre del producto" />
+        <input type="text" id="descripcionAccion" placeholder="descripcion" />
+        <input type="text" id="categoriaAccion" placeholder="Categoría" />
+        <input type="number" id="precioAccion" placeholder="Precio" />
+        <button onclick="actualizarProducto()">Actualizar</button>
+        <button onclick="eliminarProducto()">Eliminar</button>
+    </div>
+
+    <!-- Sección Crear Barbero -->
+    <div id="crearBarbero" class="seccion">
+        <h2>Crear Barbero</h2>
+        <form id="formBarbero">
+            <input type="text" id="nombreBarbero" placeholder="Nombre del barbero" />
+            <input type="text" id="correo" placeholder="Correo" />
+            <input type="text" id="especialidad" placeholder="Especialidad" />
+            <input type="number" id="telefono" placeholder="Telefono" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <!-- Lista Barberos -->
+    <div id="listaBarberos" class="seccion">
+        <h2>Lista de Barberos</h2>
+        <ul id="listaBarberos"></ul>
+    </div>
+
+    <!-- Acciones Barbero -->
+    <div id="accionesBarbero" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar Barbero</h2>
+        <input type="text" id="idBuscarBarbero" placeholder="ID del Barbero" />
+        <button onclick="buscarBarbero()">Buscar</button>
+        <input type="text" id="nombreBarberoAccion" placeholder="Nombre del barbero" />
+        <input type="text" id="correoAccion" placeholder="Correo" />
+        <input type="text" id="especialidadAccion" placeholder="Especialidad" />
+        <input type="number" id="telefonoAccion" placeholder="Telefono" />
+        <button onclick="actualizarBarbero()">Actualizar</button>
+        <button onclick="eliminarBarbero()">Eliminar</button>
+    </div>
+
+    <!-- Sección Crear Barberias -->
+    <div id="crearBarberia" class="seccion">
+        <h2>Crear Barberia</h2>
+        <form id="formBarberia">
+            <input type="text" id="nombreBarberia" placeholder="Nombre del barbero" />
+            <input type="text" id="direccion" placeholder="Direccion" />
+            <input type="text" id="ciudad" placeholder="Ciudad" />
+            <input type="number" id="telefonoBarberia" placeholder="Telefono" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <!-- Lista Barberias -->
+    <div id="listaBarberias" class="seccion">
+        <h2>Lista de Barberias</h2>
+        <ul id="listaBarberias"></ul>
+    </div>
+
+    <!-- Acciones Barberia -->
+    <div id="accionesBarberia" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar Barberia</h2>
+        <input type="text" id="idBuscarBarberia" placeholder="ID del Barberia" />
+        <button onclick="buscarBarberia()">Buscar</button>
+        <input type="text" id="nombreBarberiaAccion" placeholder="Nombre de la barberia" />
+        <input type="text" id="direccionAccion" placeholder="Direccion" />
+        <input type="text" id="ciudadAccion" placeholder="Ciudad" />
+        <input type="number" id="telefonoBarberiaAccion" placeholder="Telefono" />
+        <button onclick="actualizarBarberia()">Actualizar</button>
+        <button onclick="eliminarBarberia()">Eliminar</button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
