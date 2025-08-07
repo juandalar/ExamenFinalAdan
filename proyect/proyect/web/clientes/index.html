@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Clientes</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="mostrarSeccion('crear')">Registrar Cliente</a>
+        <a href="#" onclick="mostrarSeccion('lista')">Lista de Clientes</a>
+        <a href="#" onclick="mostrarSeccion('acciones')">Acciones</a>
+    </div>
+
+    <div id="crear" class="seccion">
+        <h2>Registrar Cliente</h2>
+        <form id="formCliente">
+            <input type="text" id="nombre" placeholder="Nombre completo" />
+            <input type="email" id="email" placeholder="Correo electrónico" />
+            <input type="text" id="telefono" placeholder="Teléfono" />
+            <input type="password" id="password" placeholder="Contraseña" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div id="lista" class="seccion">
+        <h2>Lista de Clientes</h2>
+        <ul id="listaClientes"></ul>
+    </div>
+
+    <div id="acciones" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar</h2>
+        <input type="text" id="idBuscar" placeholder="ID del cliente" />
+        <button onclick="buscarCliente()">Buscar</button>
+        <input type="text" id="nombreAccion" placeholder="Nombre completo" />
+        <input type="email" id="emailAccion" placeholder="Correo electrónico" />
+        <input type="text" id="telefonoAccion" placeholder="Teléfono" />
+        <input type="password" id="passwordAccion" placeholder="Nueva contraseña" />
+        <button onclick="actualizarCliente()">Actualizar</button>
+        <button onclick="eliminarCliente()">Eliminar</button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
